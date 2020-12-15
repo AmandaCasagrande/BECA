@@ -3,6 +3,7 @@ package br.com.everis.becaestacionamento.controller;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import br.com.everis.becaestacionamento.service.MovimentacoesService;
 @RequestMapping({"/movimentacoes"})
 public class MovimentacoesController {
 	
+	@Autowired
 	private MovimentacoesService movimentacoesService;
 	
 	@PostMapping 
@@ -37,7 +39,6 @@ public class MovimentacoesController {
 		return movimentacoesService.buscar(id);
 	}
 	
-	
 	@PutMapping(path = {"/{id}"})
 	public ResponseEntity<MovimentacoesDTO> atualizar(@PathVariable Long id, @Valid @RequestBody MovimentacoesForm movimentacoesForm){
 
@@ -49,5 +50,4 @@ public class MovimentacoesController {
 
 		return movimentacoesService.deletar(id);
 	}
-	
 }

@@ -23,7 +23,6 @@ public class GerarSaidaMovimentacaoController {
 	@Autowired
 	private GerarMovimentacaoService service;
 	
-	
 	@PostMapping 
 	@Transactional
 	public ResponseEntity<MovimentacoesDTO> cadastrar(@Valid @RequestBody GerarMovimentacaoForm movimentacoesForm, 

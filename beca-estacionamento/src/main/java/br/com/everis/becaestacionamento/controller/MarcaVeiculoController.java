@@ -26,15 +26,6 @@ public class MarcaVeiculoController {
 	@Autowired
 	private MarcaVeiculoService marcaService;
 
-/*
-	@GetMapping
-	public List<MarcaVeiculoDTO> lista (String nomeMarca) {
-		Iterable<MarcaVeiculoEntity> findAll = marcaRepository.findAll();
-
-		
-		return null;//MarcaVeiculoEntity.converter(marcaRepository.findBy()); 
-	}
-*/
 	@PostMapping
 	public ResponseEntity<MarcaVeiculoDTO> cadastrar(@Valid @RequestBody MarcaForm marcaForm, UriComponentsBuilder uriBuilder){
 
@@ -58,5 +49,4 @@ public class MarcaVeiculoController {
 		
 		return marcaService.deletar(id);
 	}
-	
 }

@@ -14,6 +14,4 @@ public interface MovimentacoesRepository extends CrudRepository<MovimentacoesEnt
 
 	public List<MovimentacoesEntity> findByDataSaidaBetweenAndStatus(LocalDateTime dataInicio, LocalDateTime dataSaida, String status);
 	
-	
-	
 }

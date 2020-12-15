@@ -45,6 +45,4 @@ public class GerarMovimentacaoForm {
 	public void setIdModelo(Long idModelo) {
 		this.idModelo = idModelo;
 	}
-	
-	
 }

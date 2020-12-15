@@ -30,6 +30,7 @@ public class VeiculoService {
 		veiculo.setPlaca(veiculoForm.getPlaca());
 		veiculo.setCor(veiculoForm.getCor());
 		veiculo.setAno(veiculoForm.getAno());
+		
 		if (veiculoForm.getIdModelo() != null) {
 			veiculo.setModelo(modeloRepository.findById(veiculoForm.getIdModelo()).orElse(null));
 		}

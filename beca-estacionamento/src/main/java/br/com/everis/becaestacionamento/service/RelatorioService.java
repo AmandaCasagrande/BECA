@@ -23,7 +23,7 @@ public class RelatorioService {
 	@Autowired
 	private MovimentacoesRepository movimentacoesRepository;
 
-	public ResponseEntity<RelatorioDTO> cadastrar(@Valid RelatorioForm relatorioForm,
+	public ResponseEntity<RelatorioDTO> retornarRelatorio(@Valid RelatorioForm relatorioForm,
 			UriComponentsBuilder uriBuilder) {
 		
 		List<MovimentacoesEntity> listaMovPeriodo = movimentacoesRepository.
@@ -46,4 +46,5 @@ public class RelatorioService {
 		
 		return ResponseEntity.created(uri).body(new RelatorioDTO(valorTotal, listDto, qntdMovimentacoes));
 	}
+	
 }

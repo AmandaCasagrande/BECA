@@ -24,9 +24,8 @@ public class RelatorioController {
 	
 	@PostMapping
 	@Transactional
-	public ResponseEntity<RelatorioDTO> cadastrar(@Valid @RequestBody RelatorioForm relatorioForm, UriComponentsBuilder uriBuilder){
+	public ResponseEntity<RelatorioDTO> retornarRelatorio(@Valid @RequestBody RelatorioForm relatorioForm, UriComponentsBuilder uriBuilder){
 
-		return relatorioService.cadastrar(relatorioForm, uriBuilder);
+		return relatorioService.retornarRelatorio(relatorioForm, uriBuilder);
 	}
-
 }

@@ -39,7 +39,6 @@ public class ModeloController {
 		return modeloService.buscar(id);
 	}
 	
-	
 	@PutMapping(path = {"/{id}"})
 	public ResponseEntity<ModeloVeiculoDTO> atualizar(@PathVariable Long id, @Valid @RequestBody ModeloForm modeloForm){
 		
@@ -51,5 +50,4 @@ public class ModeloController {
 		
 		return modeloService.deletar(id);
 	}
-	
 }

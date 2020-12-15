@@ -50,5 +50,4 @@ public class VeiculoController {
 		
 		return veiculoService.deletar(id);
 	}
-	
 }

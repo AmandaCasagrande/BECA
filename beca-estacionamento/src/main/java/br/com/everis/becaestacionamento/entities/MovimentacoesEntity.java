@@ -3,7 +3,6 @@ package br.com.everis.becaestacionamento.entities;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "movimentacoes")
-@Embeddable
 public class MovimentacoesEntity {
 	
 	@Id
@@ -44,10 +42,7 @@ public class MovimentacoesEntity {
 	@JoinColumn(name = "veiculo")
 	private VeiculoEntity veiculo;
 	
-//	public MovimentacoesEntity(String string) {
-//		// Teste
-//	}
-
+	
 	public Long getIdMovimentacoes() {
 		return idMovimentacoes;
 	}

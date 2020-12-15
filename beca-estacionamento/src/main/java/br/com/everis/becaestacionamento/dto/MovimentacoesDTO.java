@@ -51,7 +51,5 @@ public class MovimentacoesDTO {
 	public void setVeiculo(VeiculoDTO veiculo) {
 		this.veiculo = veiculo;
 	}
-	
-	
-	
+
 }
